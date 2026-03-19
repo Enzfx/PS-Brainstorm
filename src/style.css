@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* NAVBAR */
+.container-nav-bar {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-entrar {
+    position: absolute;
+    right: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 26px;
+    font-size: 17px;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+}
+.button-entrar:hover {
+    transform: scale(1.05);
+}
+
+/* LOGO */
+.logo-spotify {
+    height: 32px;
+    position: absolute;
+    left: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* BOTÃO HOME */
+.nav-icon {
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    padding: 13px;
+    margin: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon i {
+    color: #b3b3b3;
+}
+
+.nav-icon:hover i {
+    color: white;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #1F1F1F;
+    border-radius: 30px;
+    padding: 12px 16px;
+
+    width: 480px;
+    transition: 0.2s;
+}
+
+/* INPUT */
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+    font-size: 14px;
+}
+
+/* ÍCONES */
+.search-bar i {
+    color: #b3b3b3;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-bar i:hover {
+    color: white;
+}
+
+/* EFEITO AO CLICAR */
+.search-bar:focus-within {
+    background-color: #2A2A2A;
+}
+
+/* LAYOUT PRINCIPAL */
+.container-principal {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    height: calc(100vh - 60px); 
+}
+
+/* SIDEBAR */
+.container-lateral {
+    width: 268px;
+    background-color: #121212;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 100%;
+}
+.container-lateral > h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* CONTEÚDO */
+.container-box {
+    flex: 1;
+    min-width: 0;
+    background-color: #121212;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+h1 {
+    font-size: 26px;
+}
+
+/* CARDS */
+.container-playlists,
+.container-podcasts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+    background-color: #1F1F1F;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* BOTÕES */
+.button-playlist,
+.button-podcast {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+}
+
+.button-playlist:hover,
+.button-podcast:hover {
+    transform: scale(1.05);
+}
+
+/* TEXTOS */
+.container-playlists > h1,
+.container-podcasts > h1 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.container-playlists > h4,
+.container-podcasts > h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* LISTAS */
+.container-music-line,
+.container-artist-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cards-musics,
+.cards-artists {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* CARDS INDIVIDUAIS */
+.music,
+.artist {
+    margin-top: 20px;
+    margin-inline: 14px;
+    border-radius: 8px;
+    width: 216px;
+    height: 290px;
+    background-color: #181818;
+}
+
+/* IMAGEM */
+.music img {
+    width: 164px;
+    height: 164px;
+    border-radius: 16px;
+    padding: 8px;
+}
+.artist img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ANÚNCIO */
+.banner-anuncio {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    color: white;
+
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.texto-anuncio {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-anuncio strong {
+    font-size: 14px;
+}
+
+.texto-anuncio p {
+    font-size: 12px;
+    margin: 2px 0 0 0;
+}
+
+/* BOTÃO DO ANÚNCIO */
+.button-anuncio {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-anuncio:hover {
+    transform: scale(1.05);
+}
+/* LOGO */
+.logo-spotify {
+    height: 32px;
+    position: absolute;
+    left: 20px;
+
+    filter: brightness(0) invert(1);
+}
